@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
    }
    A.show_all();
 
-   //A.snap_finger(); // kill 1/2 
+   A.snap_finger(); // kill 1/2 
 
    A.show_all();
 

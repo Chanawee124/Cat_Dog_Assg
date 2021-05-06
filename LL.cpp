@@ -36,12 +36,26 @@ void LL::add_node(NODE *&A){
  }
 
 void LL::snap_finger(){
- int kill;
-
+ int kill,half,i,j;
+  NODE *t,*prev,*h;
   srand(time(NULL));
-  
+  half = size/2;
+  for(i = 0; i < half; i++){
+  prev = NULL;
+  t = hol;
   kill=rand()%size; //สุ่มฆ่า
-
-      
+  if(kill == 0){
+    t = hol;
+		hol = hol->move_next();
+  }
+  for(j = 0; j < kill; j++){
+    prev = t;
+    t = t->move_next();
+  }
+  h = t->move_next();
+  h->insert(prev); 
+  size--;
+  delete t;
+  }
 
 }

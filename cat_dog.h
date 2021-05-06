@@ -13,18 +13,16 @@ class cat:public NODE{
 public:
     cat(int,int);
     void show_node(){
-        cout<<"Meaw  "<<size<<" ";
+        cout<<"Meaw  ";
         NODE::show_node();
     }
     ~cat();
 };
 cat::cat(int x, int y):NODE(x){
   size = y;
-  cout<<"cat "<<size<<endl;
 }
 
-cat:: ~cat(){ 
-    cout<<"Cat "<<size<< " " ;
+cat:: ~cat(){
 }
 
 class dog:public NODE{
@@ -32,7 +30,7 @@ class dog:public NODE{
 public:
     dog(int,float);
     void show_node(){
-        cout<<"Hong Hong  "<<height<<" ";
+        cout<<"Hong Hong  ";
         NODE::show_node();
     }
     ~dog();
@@ -41,11 +39,8 @@ public:
 
 dog::dog(int x, float y):NODE(x){
   height = y;
-    cout<<"dog "<<height<<endl;
-
 }
 
 dog::~dog(){
-  cout<<"Dog "<<height<< " ";
 }
 #endif /* cat_dog_h */
